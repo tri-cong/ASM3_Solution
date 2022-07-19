@@ -1,0 +1,113 @@
+﻿@*@model BussinessObject.Models.Order*@
+@model Tuple<BussinessObject.Models.Order, IEnumerable<BussinessObject.Models.OrderDetail>>
+
+@{
+    ViewData["Title"] = "Details";
+    if (ViewBag.Role == "admin")
+    {
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+    else
+    {
+        Layout = "~/Views/Shared/LayoutUser.cshtml";
+    }
+    var order = Model.Item1;
+    var listDetal = Model.Item2;
+}
+
+<h1>Order</h1>
+
+<div>
+    <h4>Order</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => order.OrderDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => order.OrderDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => order.RequiredDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => order.RequiredDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => order.ShippedDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => order.ShippedDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => order.Freight)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => order.Freight)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => order.Member)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => order.Member.City)
+        </dd>
+    </dl>
+</div>
+
+<div>
+    <h3>Total: @ViewBag.Total</h3>
+</div>
+
+<h1>Order detail</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Product
+            </th>
+            <th>
+                Unit Price
+            </th>
+            <th>
+                Quantity
+            </th>
+            <th>
+                Discount
+            </th>
+            <th>
+                Order
+            </th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in listDetal)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Product.ProductName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UnitPrice)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Quantity)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Discount)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Order.OrderId)
+                </td>
+
+
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+
+<div>
+    <a asp-action="View" asp-route-end="@ViewData["end"]" asp-route-start="@ViewData["start"]">Back to List</a>
+</div>

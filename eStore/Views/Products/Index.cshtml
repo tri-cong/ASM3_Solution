@@ -1,0 +1,79 @@
+﻿@model IEnumerable<BussinessObject.Models.Product>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<div class="row">
+    <form method="get" asp-action="Index">
+        <div>
+            <input type="search" placeholder="Enter the product name..."
+                   value="@ViewData["Search"]" name="SearchValue" style="width: 400px"
+                   class="row" />
+            <input type="number" min="0.00" max="10000000.00" step="0.01" placeholder="Enter min price..."
+                   value="@ViewData["min"]" name="Min" style="width: 400px"
+                   class="row" />
+            <input type="number" min="@ViewData["min"]" max="10000000.00" step="0.01" placeholder="Enter max price..."
+                   value="@ViewData["max"]" name="Max" style="width: 400px" 
+                   class="row" />
+
+            <input type="submit" value="Search" class="btn btn-primary" class="row" />
+            <a asp-action="Index" class="row">Get all products</a>
+        </div>
+    </form>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Weight)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UnitPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UnitsInStock)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Category)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Weight)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UnitPrice)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UnitsInStock)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Category.CategoryName)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.ProductId">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.ProductId">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.ProductId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,105 @@
+﻿@*@model BussinessObject.Models.OrderDetail*@
+@model Tuple<BussinessObject.Models.OrderDetail, IEnumerable<BussinessObject.Models.Product>, IEnumerable<BussinessObject.Models.OrderDetail>>
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    BussinessObject.Models.OrderDetail detail = Model.Item1;
+
+}
+
+<h1>Create</h1>
+
+
+
+<h4>OrderDetail</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="@detail.OrderId" class="control-label"></label>
+                <input asp-for="@detail.OrderId" class="form-control" required readonly />
+            </div>
+            <div class="form-group">
+                <label asp-for="@detail.ProductId" class="control-label"></label>
+                <select asp-for="@detail.ProductId" class="form-control" asp-items="ViewBag.ProductId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="@detail.Quantity" class="control-label"></label>
+                <input asp-for="@detail.Quantity" class="form-control" />
+                <span asp-validation-for="@detail.Quantity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@detail.Discount" class="control-label"></label>
+                <input asp-for="@detail.Discount" class="form-control" />
+                <span asp-validation-for="@detail.Discount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@*table product ordered *@
+@if (Model.Item3 != null )
+{
+    <table class="table">
+        <thead>
+            <tr>
+                 <th>
+                    Product
+                </th>
+                <th>
+                    Unit price
+                </th>
+                <th>
+                    Quantity
+                </th>
+                <th>
+                    Discount
+                </th>
+               
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Item3)
+            {
+                <tr>
+                     <td>
+                        @Html.DisplayFor(modelItem => item.Product.ProductName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UnitPrice)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Quantity)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Discount)
+                    </td>
+                   
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { productId=item.ProductId, orderId=item.OrderId }) |
+                        @Html.ActionLink("Details", "Details", new { productId=item.ProductId, orderId=item.OrderId }) |
+                        @Html.ActionLink("Delete", "Delete", new { productId=item.ProductId, orderId=item.OrderId })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+}
+    <div>
+    <a asp-action="Index" asp-controller="Members">Back to List member</a>
+    </div>
+
+@section Scripts {
+    @{
+    await Html.RenderPartialAsync("_ValidationScriptsPartial");
+}
+}

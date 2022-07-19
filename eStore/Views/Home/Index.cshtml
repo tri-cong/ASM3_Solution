@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+     Layout = null;
+
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <h3>Login Page</h3>
+    <form method="post" asp-controller="Home" asp-action="Index">
+        <table border="0" cellpadding="2" cellspacing="2">
+            <tr>
+                <td>Email</td>
+                <td><input  class="form-control" name="email" value="@ViewData["email"]" /></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td> <input  class="form-control" name="password" type="password" value="@ViewData["password"]"/></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><input type="submit" value="Login"></td>
+            </tr>
+        </table>
+    </form>
+    <span><p style="color: red">
+        @ViewBag.Error
+    </p></span>
+    
+</div>
+
