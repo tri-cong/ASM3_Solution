@@ -19,7 +19,7 @@ namespace eStore.Controllers
         public ActionResult Index()
         {
             string role = HttpContext.Session.GetString("Role");
-            if( role != "admin")
+            if (role != "admin")
             {
                 return RedirectToAction("Index", "Home");
             }
@@ -28,7 +28,8 @@ namespace eStore.Controllers
                 ViewBag.Role = role;
                 var list = memberRepository.GetAll();
                 return View(list);
-            } catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 return View(ex);
             }
@@ -41,12 +42,13 @@ namespace eStore.Controllers
             Member member;
             if (id != null)
             {
-                 member = memberRepository.Get(id.Value);
-            } else
+                member = memberRepository.Get(id.Value);
+            }
+            else
             {
                 member = memberRepository.GetMemberByEmail(email);
             }
-            if(member == null)
+            if (member == null)
             {
                 return NotFound();
             }
@@ -68,7 +70,7 @@ namespace eStore.Controllers
         // GET: MembersController/Create
         public ActionResult Create()
         {
-            
+
             Member member = new Member();
             member.MemberId = memberRepository.GetMaxId() + 1;
             return View(member);
@@ -79,7 +81,7 @@ namespace eStore.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(Member member)
         {
-            
+
             try
             {
                 if (ModelState.IsValid)
@@ -96,7 +98,7 @@ namespace eStore.Controllers
                     return RedirectToAction(nameof(Index));
                 }
                 return RedirectToAction("Index", "Home");
-               
+
             }
             catch
             {
@@ -107,7 +109,7 @@ namespace eStore.Controllers
         // GET: MembersController/Edit/5
         public ActionResult Edit(int? id)
         {
-            
+
             if (id == null)
             {
                 return NotFound();
@@ -127,7 +129,7 @@ namespace eStore.Controllers
         {
             try
             {
-                if(id != member.MemberId)
+                if (id != member.MemberId)
                 {
                     return NotFound();
                 }
@@ -139,15 +141,16 @@ namespace eStore.Controllers
                 string role = HttpContext.Session.GetString("Role");
                 if (role != "admin")
                 {
-                    return RedirectToAction("Details", "Members", new {id = member.MemberId});
-                } else if(role == "admin")
+                    return RedirectToAction("Details", "Members", new { id = member.MemberId });
+                }
+                else if (role == "admin")
                 {
                     return RedirectToAction(nameof(Index));
                 }
                 return RedirectToAction("Index", "Home");
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 ViewBag.message = ex.Message;
                 return View(member);

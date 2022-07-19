@@ -13,8 +13,9 @@ namespace DataAccess
         private static ProductDAO instance;
         private FStoreDBContext context;
 
-        private static readonly object InstanceLock = new object(); 
-        private ProductDAO() {
+        private static readonly object InstanceLock = new object();
+        private ProductDAO()
+        {
             context = new FStoreDBContext();
         }
         public static ProductDAO Instance
@@ -26,7 +27,7 @@ namespace DataAccess
                     if (instance == null)
                     {
                         instance = new ProductDAO();
-                    } 
+                    }
                     return instance;
                 }
             }
@@ -36,9 +37,9 @@ namespace DataAccess
         {
             try
             {
-                return context.Products.Include(x => x.Category) ;
-                
-            } catch (Exception ex)
+                return context.Products.Include(x => x.Category);
+            }
+            catch (Exception ex)
             {
                 throw new Exception(ex.Message);
             }
@@ -48,7 +49,7 @@ namespace DataAccess
         {
             try
             {
-                    return context.Products.SingleOrDefault(x => x.ProductId == id);
+                return context.Products.SingleOrDefault(x => x.ProductId == id);
             }
             catch (Exception ex)
             {
@@ -60,9 +61,9 @@ namespace DataAccess
         {
             try
             {
-                    context.Products.Add(product);
-                    context.SaveChanges();
-                    return;
+                context.Products.Add(product);
+                context.SaveChanges();
+                return;
             }
             catch (Exception ex)
             {
@@ -73,10 +74,10 @@ namespace DataAccess
         {
             try
             {
-                    var product = context.Products.SingleOrDefault(x => x.ProductId == id); 
-                    context.Products.Remove(product);
-                    context.SaveChanges();
-                    return;
+                var product = context.Products.SingleOrDefault(x => x.ProductId == id);
+                context.Products.Remove(product);
+                context.SaveChanges();
+                return;
             }
             catch (Exception ex)
             {
@@ -116,10 +117,10 @@ namespace DataAccess
         {
             try
             {
-                    return context.Products.Where(p => (p.UnitPrice >= min || min == 0 || min == null)
-                                                && (p.UnitPrice <= max || max == 0 || max == null)
-                                                && (p.ProductName.Contains(name) || name == null)).Include(p => p.Category);
-            
+                return context.Products.Where(p => (p.UnitPrice >= min || min == 0 || min == null)
+                                            && (p.UnitPrice <= max || max == 0 || max == null)
+                                            && (p.ProductName.Contains(name) || name == null)).Include(p => p.Category);
+
             }
             catch (Exception ex)
             {

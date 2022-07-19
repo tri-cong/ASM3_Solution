@@ -41,20 +41,17 @@ namespace eStore.Controllers
         // GET: OrderDetailsController/Details/5
         public ActionResult Details(int id)
         {
-            
             try
             {
-                
                 var list = detailRepository.GetOrderdetailByOrderId(id);
-                
-
                 return View(list);
-            } catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 ViewBag.Error = ex.Message;
                 return View();
             }
-           
+
         }
 
         // GET: OrderDetailsController/Create
@@ -67,7 +64,6 @@ namespace eStore.Controllers
             }
             try
             {
-
                 ViewData["Search"] = SearchValue;
                 ViewData["min"] = Min;
                 ViewData["max"] = Max;
@@ -86,15 +82,15 @@ namespace eStore.Controllers
                     return NotFound();
                 }
                 Order order = orderRepository.GetOrderById(orderId.Value);
-                if(order == null)
+                if (order == null)
                 {
                     return NotFound();
                 }
                 var list = productRepository.GetProducts();
-                
-               
+
+
                 ViewBag.ProductId = new SelectList(list, nameof(Product.ProductId), nameof(Product.ProductName));
-                
+
                 OrderDetail detail = new OrderDetail();
                 detail.OrderId = orderId.Value;
                 IEnumerable<OrderDetail> orderDetails;
@@ -111,8 +107,9 @@ namespace eStore.Controllers
 
                 var mymodel = new Tuple<OrderDetail, IEnumerable<Product>, IEnumerable<OrderDetail>>(detail, productList, orderDetails);
                 return View(mymodel);
-                
-            } catch(Exception ex)
+
+            }
+            catch (Exception ex)
             {
                 ViewBag.Error = ex.Message;
                 return View();
@@ -123,7 +120,7 @@ namespace eStore.Controllers
         // POST: OrderDetailsController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(OrderDetail detail )
+        public ActionResult Create(OrderDetail detail)
         {
             string role = HttpContext.Session.GetString("Role");
             if (role != "admin")
@@ -189,12 +186,12 @@ namespace eStore.Controllers
             }
             try
             {
-                if(orderId != detail.OrderId && productId != detail.ProductId)
+                if (orderId != detail.OrderId && productId != detail.ProductId)
                 {
                     return NotFound();
-                } 
+                }
                 detailRepository.Update(detail);
-                return RedirectToAction("Create", new { orderId = detail.OrderId});
+                return RedirectToAction("Create", new { orderId = detail.OrderId });
             }
             catch
             {
@@ -231,7 +228,7 @@ namespace eStore.Controllers
             }
             try
             {
-                if(productId != detail.ProductId && orderId != detail.OrderId)
+                if (productId != detail.ProductId && orderId != detail.OrderId)
                 {
                     return NotFound();
                 }
@@ -262,6 +259,6 @@ namespace eStore.Controllers
             return RedirectToAction(nameof(Create));
         }
 
-        
+
     }
 }

@@ -15,11 +15,12 @@ namespace DataAccess
 
         public string CheckLogin(string Email, string Password)
         {
-            string fileName = "appsetting.json";
+            string fileName = "appsettings.json";
             string json = File.ReadAllText(fileName);
             Account account = JsonSerializer.Deserialize<Account>(json);
 
             string result = "";
+
             if (account != null)
             {
                 if (Email == account.Email && Password == account.Password)
@@ -37,18 +38,13 @@ namespace DataAccess
                     {
                         throw new Exception("Wrong email or password");
                     }
-
                 }
-
             }
             else
             {
                 throw new Exception("Login Error");
             }
-
-
             return result;
-
         }
     }
 }

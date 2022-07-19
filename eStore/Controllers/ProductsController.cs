@@ -20,10 +20,10 @@ namespace eStore.Controllers
             categoryRepository = new CategoryRepository();
         }
         // GET: ProductsController
-        
+
         public ActionResult Index(string SearchValue, decimal Max, decimal Min)
         {
-            
+
             string role = HttpContext.Session.GetString("Role");
             if (role != "admin")
             {
@@ -35,7 +35,7 @@ namespace eStore.Controllers
 
             var productList = productsRepository.SearchProduct(SearchValue, Min, Max).ToList();
             return View(productList);
-            
+
         }
 
         // GET: ProductsController/Details/5

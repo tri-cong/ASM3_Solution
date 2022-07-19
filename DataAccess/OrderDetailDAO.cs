@@ -65,7 +65,7 @@ namespace DataAccess
                 {
                     Product product = context.Products.SingleOrDefault(x => x.ProductId == detail.ProductId);
                     product.UnitsInStock -= detail.Quantity;
-                    if(product.UnitsInStock < 0)
+                    if (product.UnitsInStock < 0)
                     {
                         throw new Exception("Don't enough quantity.");
                     }
@@ -77,7 +77,6 @@ namespace DataAccess
                 {
                     throw new Exception("Product is already exist.");
                 }
-
             }
             catch (Exception ex)
             {
@@ -101,7 +100,7 @@ namespace DataAccess
                 }
                 else
                 {
-                    throw new Exception("Product is not found.");
+                    throw new Exception("Product is not found !");
                 }
 
             }
@@ -118,13 +117,13 @@ namespace DataAccess
                                                             && x.ProductId == detail.ProductId);
                 if (o != null)
                 {
-                    if(o.Quantity != detail.Quantity)
+                    if (o.Quantity != detail.Quantity)
                     {
                         //Lấy product trong kho 
                         Product product = context.Products.SingleOrDefault(x => x.ProductId == detail.ProductId);
                         int x = o.Quantity - detail.Quantity;
                         product.UnitsInStock += x;
-                        if(product.UnitsInStock < 0)
+                        if (product.UnitsInStock < 0)
                         {
                             throw new Exception("Don't enough quantity.");
                         }

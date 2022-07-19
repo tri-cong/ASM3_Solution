@@ -17,7 +17,7 @@ namespace eStore.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         IMemberRepository _memberRepository;
-        
+
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
@@ -36,35 +36,42 @@ namespace eStore.Controllers
                 return View();
             }
 
-            if (email.Length > 0 && password.Length > 0)
+            if (email.Length == 0 || password.Length == 0)
             {
-                string role = "";
-                Login login = new Login();
-                try
-                {
-                    role = login.CheckLogin(email, password);
-                }
-                catch (Exception ex)
-                {
-                    ViewBag.Error = "Please input right email and password";
-                }
-                if (role == "admin")
-                {
-                    HttpContext.Session.SetString("Role", role);
-                    HttpContext.Session.SetString("Email", email);
-                    return RedirectToAction("Index", "Products");
-                }
-                else if (role == "user")
-                {
-                    var member = _memberRepository.GetMemberByEmail(email);
-                    HttpContext.Session.SetString("Role", role);
-                    HttpContext.Session.SetString("Email", email);
-                    return RedirectToAction("Details", "Members", new {id = member.MemberId});
-                }
+                ViewBag.Error = "Input is not blank";
             }
             else
             {
-                ViewBag.Error = "Please input right email and password";
+                if (email.Length > 0 && password.Length > 0)
+                {
+                    string role = "";
+                    Login login = new Login();
+                    try
+                    {
+                        role = login.CheckLogin(email, password);
+                    }
+                    catch (Exception ex)
+                    {
+                        ViewBag.Error = "Please input right email and password !";
+                    }
+                    if (role == "admin")
+                    {
+                        HttpContext.Session.SetString("Role", role);
+                        HttpContext.Session.SetString("Email", email);
+                        return RedirectToAction("Index", "Products");
+                    }
+                    else if (role == "user")
+                    {
+                        var member = _memberRepository.GetMemberByEmail(email);
+                        HttpContext.Session.SetString("Role", role);
+                        HttpContext.Session.SetString("Email", email);
+                        return RedirectToAction("Details", "Members", new { id = member.MemberId });
+                    }
+                }
+                else
+                {
+                    ViewBag.Error = "Please input right email and password";
+                }
             }
 
             return View();

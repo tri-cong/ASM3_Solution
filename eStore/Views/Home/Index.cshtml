@@ -1,6 +1,6 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
-     Layout = null;
+    Layout = null;
 
 }
 
@@ -11,11 +11,11 @@
         <table border="0" cellpadding="2" cellspacing="2">
             <tr>
                 <td>Email</td>
-                <td><input  class="form-control" name="email" value="@ViewData["email"]" /></td>
+                <td><input class="form-control" name="email" value="@ViewData["email"]" /></td>
             </tr>
             <tr>
                 <td>Password</td>
-                <td> <input  class="form-control" name="password" type="password" value="@ViewData["password"]"/></td>
+                <td> <input class="form-control" name="password" type="password" value="@ViewData["password"]" /></td>
             </tr>
             <tr>
                 <td>&nbsp;</td>
@@ -23,9 +23,11 @@
             </tr>
         </table>
     </form>
-    <span><p style="color: red">
-        @ViewBag.Error
-    </p></span>
-    
+    <span>
+        <p style="color: red">
+            @ViewBag.Error
+        </p>
+    </span>
+
 </div>
 

@@ -22,7 +22,7 @@ namespace eStore.Controllers
             string role = HttpContext.Session.GetString("Role");
             if (role != "admin")
             {
-               return RedirectToAction("Index", "Home");
+                return RedirectToAction("Index", "Home");
             }
             else
             {
@@ -31,7 +31,7 @@ namespace eStore.Controllers
                     ViewData["end"] = end;
                     ViewData["start"] = start;
 
-                    if(end.HasValue && start.HasValue)
+                    if (end.HasValue && start.HasValue)
                     {
                         var list = orderRepository.GetOrderInRange(start.Value, end.Value);
                         ViewBag.Role = role;
@@ -40,14 +40,18 @@ namespace eStore.Controllers
                         {
                             total += detailRepository.GetIncomeOfOrder(item.OrderId);
                         }
-                        ViewBag.Total = total;  
+                        ViewBag.Total = total;
+                        ViewBag.Role = role;
                         return View(list);
-                    } else
+                        
+                    }
+                    else
                     {
+                        ViewBag.Role = role;
                         return View(null);
                     }
 
-                   
+
                 }
                 catch (Exception ex)
                 {
@@ -66,7 +70,7 @@ namespace eStore.Controllers
             try
             {
                 role = HttpContext.Session.GetString("Role");
-                if (role != "admin" )
+                if (role != "admin")
                 {
                     return RedirectToAction("Index", "Home");
                 }
@@ -82,7 +86,7 @@ namespace eStore.Controllers
             }
             Order order = orderRepository.GetOrderById(id.Value);
             var list = detailRepository.GetOrderdetailByOrderId(order.OrderId);
-            
+
             ViewBag.Total = detailRepository.GetIncomeOfOrder(order.OrderId);
             if (order == null)
             {
@@ -97,7 +101,7 @@ namespace eStore.Controllers
             }
         }
 
-        
+
 
     }
 }
