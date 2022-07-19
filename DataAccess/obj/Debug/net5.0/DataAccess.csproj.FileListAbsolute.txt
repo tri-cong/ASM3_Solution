@@ -28,3 +28,18 @@ C:\Users\ntrun\Desktop\Ass3Solution_SE151323\Ass03Solution_SE151323\DataAccess\o
 C:\Users\ntrun\Desktop\Ass3Solution_SE151323\Ass03Solution_SE151323\DataAccess\obj\Debug\net5.0\refint\DataAccess.dll
 C:\Users\ntrun\Desktop\Ass3Solution_SE151323\Ass03Solution_SE151323\DataAccess\obj\Debug\net5.0\DataAccess.pdb
 C:\Users\ntrun\Desktop\Ass3Solution_SE151323\Ass03Solution_SE151323\DataAccess\obj\Debug\net5.0\ref\DataAccess.dll
+D:\VisualStudio_SourceCode\FPT_Source C#\ASM3_Solution\ASS3-PRN\ASM3_Solution\DataAccess\bin\Debug\net5.0\DataAccess.deps.json
+D:\VisualStudio_SourceCode\FPT_Source C#\ASM3_Solution\ASS3-PRN\ASM3_Solution\DataAccess\bin\Debug\net5.0\DataAccess.dll
+D:\VisualStudio_SourceCode\FPT_Source C#\ASM3_Solution\ASS3-PRN\ASM3_Solution\DataAccess\bin\Debug\net5.0\DataAccess.pdb
+D:\VisualStudio_SourceCode\FPT_Source C#\ASM3_Solution\ASS3-PRN\ASM3_Solution\DataAccess\bin\Debug\net5.0\BussinessObject.dll
+D:\VisualStudio_SourceCode\FPT_Source C#\ASM3_Solution\ASS3-PRN\ASM3_Solution\DataAccess\bin\Debug\net5.0\BussinessObject.pdb
+D:\VisualStudio_SourceCode\FPT_Source C#\ASM3_Solution\ASS3-PRN\ASM3_Solution\DataAccess\obj\Debug\net5.0\DataAccess.csproj.AssemblyReference.cache
+D:\VisualStudio_SourceCode\FPT_Source C#\ASM3_Solution\ASS3-PRN\ASM3_Solution\DataAccess\obj\Debug\net5.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+D:\VisualStudio_SourceCode\FPT_Source C#\ASM3_Solution\ASS3-PRN\ASM3_Solution\DataAccess\obj\Debug\net5.0\DataAccess.AssemblyInfoInputs.cache
+D:\VisualStudio_SourceCode\FPT_Source C#\ASM3_Solution\ASS3-PRN\ASM3_Solution\DataAccess\obj\Debug\net5.0\DataAccess.AssemblyInfo.cs
+D:\VisualStudio_SourceCode\FPT_Source C#\ASM3_Solution\ASS3-PRN\ASM3_Solution\DataAccess\obj\Debug\net5.0\DataAccess.csproj.CoreCompileInputs.cache
+D:\VisualStudio_SourceCode\FPT_Source C#\ASM3_Solution\ASS3-PRN\ASM3_Solution\DataAccess\obj\Debug\net5.0\DataAccess.csproj.CopyComplete
+D:\VisualStudio_SourceCode\FPT_Source C#\ASM3_Solution\ASS3-PRN\ASM3_Solution\DataAccess\obj\Debug\net5.0\DataAccess.dll
+D:\VisualStudio_SourceCode\FPT_Source C#\ASM3_Solution\ASS3-PRN\ASM3_Solution\DataAccess\obj\Debug\net5.0\refint\DataAccess.dll
+D:\VisualStudio_SourceCode\FPT_Source C#\ASM3_Solution\ASS3-PRN\ASM3_Solution\DataAccess\obj\Debug\net5.0\DataAccess.pdb
+D:\VisualStudio_SourceCode\FPT_Source C#\ASM3_Solution\ASS3-PRN\ASM3_Solution\DataAccess\obj\Debug\net5.0\ref\DataAccess.dll

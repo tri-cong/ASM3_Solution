@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ntrun\\Desktop\\Ass3Solution_SE151323\\Ass03Solution_SE151323\\BussinessObject\\BussinessObject.csproj": {}
+    "D:\\VisualStudio_SourceCode\\FPT_Source C#\\ASM3_Solution\\ASS3-PRN\\ASM3_Solution\\BussinessObject\\BussinessObject.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ntrun\\Desktop\\Ass3Solution_SE151323\\Ass03Solution_SE151323\\BussinessObject\\BussinessObject.csproj": {
+    "D:\\VisualStudio_SourceCode\\FPT_Source C#\\ASM3_Solution\\ASS3-PRN\\ASM3_Solution\\BussinessObject\\BussinessObject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ntrun\\Desktop\\Ass3Solution_SE151323\\Ass03Solution_SE151323\\BussinessObject\\BussinessObject.csproj",
+        "projectUniqueName": "D:\\VisualStudio_SourceCode\\FPT_Source C#\\ASM3_Solution\\ASS3-PRN\\ASM3_Solution\\BussinessObject\\BussinessObject.csproj",
         "projectName": "BussinessObject",
-        "projectPath": "C:\\Users\\ntrun\\Desktop\\Ass3Solution_SE151323\\Ass03Solution_SE151323\\BussinessObject\\BussinessObject.csproj",
-        "packagesPath": "C:\\Users\\ntrun\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ntrun\\Desktop\\Ass3Solution_SE151323\\Ass03Solution_SE151323\\BussinessObject\\obj\\",
+        "projectPath": "D:\\VisualStudio_SourceCode\\FPT_Source C#\\ASM3_Solution\\ASS3-PRN\\ASM3_Solution\\BussinessObject\\BussinessObject.csproj",
+        "packagesPath": "C:\\Users\\at050\\.nuget\\packages\\",
+        "outputPath": "D:\\VisualStudio_SourceCode\\FPT_Source C#\\ASM3_Solution\\ASS3-PRN\\ASM3_Solution\\BussinessObject\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ntrun\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\at050\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,8 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.telerik.com/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
@@ -48,17 +49,17 @@
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.12, )"
+              "version": "[5.0.14, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[5.0.12, )"
+              "version": "[5.0.14, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.12, )"
+              "version": "[5.0.14, )"
             }
           },
           "imports": [
@@ -76,7 +77,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

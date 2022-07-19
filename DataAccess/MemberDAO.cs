@@ -12,9 +12,10 @@ namespace DataAccess
         FStoreDBContext context;
         private static MemberDAO instance;
         private static readonly object InstanceLock = new object();
-        private MemberDAO() {
+        private MemberDAO()
+        {
             context = new FStoreDBContext();
-            }
+        }
 
         public static MemberDAO Instance
         {
@@ -38,15 +39,17 @@ namespace DataAccess
             try
             {
                 var m = context.Members.FirstOrDefault(x => x.Email.Equals(member.Email));
-                if(m == null)
+                if (m == null)
                 {
                     context.Members.Add(member);
                     context.SaveChanges();
-                } else
+                }
+                else
                 {
                     throw new Exception("Email is already exist.");
                 }
-            } catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 throw new Exception(ex.Message);
             }
@@ -64,7 +67,7 @@ namespace DataAccess
             }
         }
 
-        
+
 
         public Member GetMemberById(int id)
         {
@@ -129,8 +132,8 @@ namespace DataAccess
             {
                 int id = 0;
                 id = (from x in context.Members
-                          orderby x.MemberId descending
-                          select x.MemberId).FirstOrDefault();
+                      orderby x.MemberId descending
+                      select x.MemberId).FirstOrDefault();
                 return id;
             }
             catch (Exception ex)
@@ -150,12 +153,13 @@ namespace DataAccess
         public Member GetMemberByEmail(string email)
         {
             try
-            { 
+            {
                 return context.Members.FirstOrDefault(x => x.Email.Equals(email));
-            } catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 throw new Exception(ex.Message);
             }
-        } 
+        }
     }
 }

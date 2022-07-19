@@ -2003,7 +2003,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.12"
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.14"
         },
         "compile": {
           "bin/placeholder/BussinessObject.dll": {}
@@ -7150,23 +7150,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ntrun\\.nuget\\packages\\": {},
+    "C:\\Users\\at050\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ntrun\\Desktop\\Ass3Solution_SE151323\\Ass03Solution_SE151323\\eStore\\eStore.csproj",
+      "projectUniqueName": "D:\\VisualStudio_SourceCode\\FPT_Source C#\\ASM3_Solution\\ASS3-PRN\\ASM3_Solution\\eStore\\eStore.csproj",
       "projectName": "eStore",
-      "projectPath": "C:\\Users\\ntrun\\Desktop\\Ass3Solution_SE151323\\Ass03Solution_SE151323\\eStore\\eStore.csproj",
-      "packagesPath": "C:\\Users\\ntrun\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ntrun\\Desktop\\Ass3Solution_SE151323\\Ass03Solution_SE151323\\eStore\\obj\\",
+      "projectPath": "D:\\VisualStudio_SourceCode\\FPT_Source C#\\ASM3_Solution\\ASS3-PRN\\ASM3_Solution\\eStore\\eStore.csproj",
+      "packagesPath": "C:\\Users\\at050\\.nuget\\packages\\",
+      "outputPath": "D:\\VisualStudio_SourceCode\\FPT_Source C#\\ASM3_Solution\\ASS3-PRN\\ASM3_Solution\\eStore\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\ntrun\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\at050\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -7175,17 +7175,18 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://nuget.telerik.com/v3/index.json": {}
       },
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\ntrun\\Desktop\\Ass3Solution_SE151323\\Ass03Solution_SE151323\\BussinessObject\\BussinessObject.csproj": {
-              "projectPath": "C:\\Users\\ntrun\\Desktop\\Ass3Solution_SE151323\\Ass03Solution_SE151323\\BussinessObject\\BussinessObject.csproj"
+            "D:\\VisualStudio_SourceCode\\FPT_Source C#\\ASM3_Solution\\ASS3-PRN\\ASM3_Solution\\BussinessObject\\BussinessObject.csproj": {
+              "projectPath": "D:\\VisualStudio_SourceCode\\FPT_Source C#\\ASM3_Solution\\ASS3-PRN\\ASM3_Solution\\BussinessObject\\BussinessObject.csproj"
             },
-            "C:\\Users\\ntrun\\Desktop\\Ass3Solution_SE151323\\Ass03Solution_SE151323\\DataAccess\\DataAccess.csproj": {
-              "projectPath": "C:\\Users\\ntrun\\Desktop\\Ass3Solution_SE151323\\Ass03Solution_SE151323\\DataAccess\\DataAccess.csproj"
+            "D:\\VisualStudio_SourceCode\\FPT_Source C#\\ASM3_Solution\\ASS3-PRN\\ASM3_Solution\\DataAccess\\DataAccess.csproj": {
+              "projectPath": "D:\\VisualStudio_SourceCode\\FPT_Source C#\\ASM3_Solution\\ASS3-PRN\\ASM3_Solution\\DataAccess\\DataAccess.csproj"
             }
           }
         }
@@ -7233,7 +7234,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }

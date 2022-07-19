@@ -10,69 +10,70 @@
     {
         Layout = "~/Views/Shared/LayoutUser.cshtml";
     }
-    }
+}
 
 <h1>Report</h1>
 
 <form asp-action="View">
     <div>
-        <input type="date" name="start" pattern='dd/MM/yyyy'  value="@ViewData["start"]"/>
+        <input type="date" name="start" pattern='dd/MM/yyyy' value="@ViewData["start"]" />
     </div>
     <div>
-        <input type="date" name="end" pattern='dd/MM/yyyy' value="@ViewData["end"]"/>
+        <input type="date" name="end" pattern='dd/MM/yyyy' value="@ViewData["end"]" />
     </div>
     <div>
         <input type="submit" />
     </div>
 </form>
-@if(Model != null){
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.OrderDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.RequiredDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ShippedDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Freight)
-            </th>
-            <th>
-                Email Member
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
+@if (Model != null)
+{
+    <table class="table">
+        <thead>
             <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.OrderDate)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.RequiredDate)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.ShippedDate)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Freight)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Member.Email)
-                </td>
-                <td>
-                    <a asp-controller="Report" asp-action="Details" asp-route-id="@item.OrderId" asp-route-end="@ViewData["end"]" asp-route-start="@ViewData["start"]">Details</a> 
-                </td>
+                <th>
+                    @Html.DisplayNameFor(model => model.OrderDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.RequiredDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ShippedDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Freight)
+                </th>
+                <th>
+                    Email Member
+                </th>
+                <th></th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.OrderDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.RequiredDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ShippedDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Freight)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Member.Email)
+                    </td>
+                    <td>
+                        <a asp-controller="Report" asp-action="Details" asp-route-id="@item.OrderId" asp-route-end="@ViewData["end"]" asp-route-start="@ViewData["start"]">Details</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
 }
 
 <div>

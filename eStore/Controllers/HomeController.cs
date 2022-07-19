@@ -17,7 +17,7 @@ namespace eStore.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         IMemberRepository _memberRepository;
-
+        
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;

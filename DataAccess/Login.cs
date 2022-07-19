@@ -9,7 +9,7 @@ using BussinessObject.Models;
 
 namespace DataAccess
 {
-    
+
     public class Login
     {
 
@@ -28,15 +28,16 @@ namespace DataAccess
                 }
                 else
                 {
-                        Member mem = MemberDAO.Instance.CheckLogin(Email, Password);
-                    if(mem != null)
+                    Member mem = MemberDAO.Instance.CheckLogin(Email, Password);
+                    if (mem != null)
                     {
                         result = "user";
-                    } else
+                    }
+                    else
                     {
                         throw new Exception("Wrong email or password");
                     }
-                        
+
                 }
 
             }

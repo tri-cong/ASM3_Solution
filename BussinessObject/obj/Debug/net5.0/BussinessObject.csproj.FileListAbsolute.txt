@@ -28,3 +28,18 @@ C:\Users\ntrun\Desktop\Ass3Solution_SE151323\Ass03Solution_SE151323\BussinessObj
 C:\Users\ntrun\Desktop\Ass3Solution_SE151323\Ass03Solution_SE151323\BussinessObject\obj\Debug\net5.0\BussinessObject.pdb
 C:\Users\ntrun\Desktop\Ass3Solution_SE151323\Ass03Solution_SE151323\BussinessObject\obj\Debug\net5.0\BussinessObject.genruntimeconfig.cache
 C:\Users\ntrun\Desktop\Ass3Solution_SE151323\Ass03Solution_SE151323\BussinessObject\obj\Debug\net5.0\ref\BussinessObject.dll
+D:\VisualStudio_SourceCode\FPT_Source C#\ASM3_Solution\ASS3-PRN\ASM3_Solution\BussinessObject\bin\Debug\net5.0\BussinessObject.deps.json
+D:\VisualStudio_SourceCode\FPT_Source C#\ASM3_Solution\ASS3-PRN\ASM3_Solution\BussinessObject\bin\Debug\net5.0\BussinessObject.runtimeconfig.json
+D:\VisualStudio_SourceCode\FPT_Source C#\ASM3_Solution\ASS3-PRN\ASM3_Solution\BussinessObject\bin\Debug\net5.0\BussinessObject.runtimeconfig.dev.json
+D:\VisualStudio_SourceCode\FPT_Source C#\ASM3_Solution\ASS3-PRN\ASM3_Solution\BussinessObject\bin\Debug\net5.0\BussinessObject.dll
+D:\VisualStudio_SourceCode\FPT_Source C#\ASM3_Solution\ASS3-PRN\ASM3_Solution\BussinessObject\bin\Debug\net5.0\BussinessObject.pdb
+D:\VisualStudio_SourceCode\FPT_Source C#\ASM3_Solution\ASS3-PRN\ASM3_Solution\BussinessObject\obj\Debug\net5.0\BussinessObject.csproj.AssemblyReference.cache
+D:\VisualStudio_SourceCode\FPT_Source C#\ASM3_Solution\ASS3-PRN\ASM3_Solution\BussinessObject\obj\Debug\net5.0\BussinessObject.GeneratedMSBuildEditorConfig.editorconfig
+D:\VisualStudio_SourceCode\FPT_Source C#\ASM3_Solution\ASS3-PRN\ASM3_Solution\BussinessObject\obj\Debug\net5.0\BussinessObject.AssemblyInfoInputs.cache
+D:\VisualStudio_SourceCode\FPT_Source C#\ASM3_Solution\ASS3-PRN\ASM3_Solution\BussinessObject\obj\Debug\net5.0\BussinessObject.AssemblyInfo.cs
+D:\VisualStudio_SourceCode\FPT_Source C#\ASM3_Solution\ASS3-PRN\ASM3_Solution\BussinessObject\obj\Debug\net5.0\BussinessObject.csproj.CoreCompileInputs.cache
+D:\VisualStudio_SourceCode\FPT_Source C#\ASM3_Solution\ASS3-PRN\ASM3_Solution\BussinessObject\obj\Debug\net5.0\BussinessObject.dll
+D:\VisualStudio_SourceCode\FPT_Source C#\ASM3_Solution\ASS3-PRN\ASM3_Solution\BussinessObject\obj\Debug\net5.0\refint\BussinessObject.dll
+D:\VisualStudio_SourceCode\FPT_Source C#\ASM3_Solution\ASS3-PRN\ASM3_Solution\BussinessObject\obj\Debug\net5.0\BussinessObject.pdb
+D:\VisualStudio_SourceCode\FPT_Source C#\ASM3_Solution\ASS3-PRN\ASM3_Solution\BussinessObject\obj\Debug\net5.0\BussinessObject.genruntimeconfig.cache
+D:\VisualStudio_SourceCode\FPT_Source C#\ASM3_Solution\ASS3-PRN\ASM3_Solution\BussinessObject\obj\Debug\net5.0\ref\BussinessObject.dll
