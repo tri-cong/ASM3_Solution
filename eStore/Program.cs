@@ -23,4 +23,4 @@ namespace eStore
                     webBuilder.UseStartup<Startup>();
                 });
     }
-}
+}  
