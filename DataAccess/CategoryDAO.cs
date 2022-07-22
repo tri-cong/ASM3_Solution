@@ -30,7 +30,7 @@ namespace DataAccess
                     return instance;
                 }
             }
-        }
+        } 
 
         public IEnumerable<Category> GetAll()
         {
